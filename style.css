@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Goldman&family=IBM+Plex+Sans:wght@500&family=Roboto&family=Roboto+Mono:ital@1&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -8,12 +10,34 @@ body{
     background: rgb(24, 23, 23);
 }
 
+.beat-keys{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .keys{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 30vh;
     flex: 1;
+}
+h3{
+    font-size: 5rem;
+    letter-spacing: 5px;
+    color: #f77f00;
+}
+h5{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: 'Roboto Mono', monospace;
+    color: #adb5bd;
+    margin-bottom: 4rem;
+}
+
+h3,h5{
+    text-align: center;
 }
 
 .key{
@@ -44,4 +68,55 @@ kbd{
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #ffc600;
+}
+
+footer {
+    background-color: rgb(10, 10, 10);
+    padding: 20px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color: #adb5bd;
+    letter-spacing: 0.5rem;
+    font-size: 1.3rem;
+    margin-top: 10rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .beat-keys{
+        display: grid;
+        margin: 1rem;
+        grid-template-columns: repeat(1,1fr); /* 2 columns */
+        grid-gap: 1rem; /* Adjust spacing between keys */
+    }
+    .keys {
+        display: grid;
+        margin: 1rem;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-gap: 1rem; /* Adjust spacing between keys */
+    }
+
+    h5{
+        margin-bottom: 2rem;
+    }
+
+    .key {
+        width: auto; /* Allow keys to take the full width of the grid cell */
+        margin: 0rem; /* Adjust margin for smaller screens */
+        padding: 0.1rem 0.1rem; /* Adjust padding for smaller screens */
+        font-size: 0.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .key:nth-child(9) {
+        grid-column: span 2;
+    }
+
+    .playing {
+        transform: scale(1.05);
+        border-color: yellow;
+        box-shadow: 0 0 10px #ffc600;
+    }
+
+    footer{
+        margin-top: 5rem;
+    }
 }

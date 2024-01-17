@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VDB | Virtual Drums & Beats</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="button.css">
 </head>
 <body>
+    <h3>VIRTUAL</h3>
+    <h5>Drums & Beats</h5>
+    <div class="beat-keys">
+        <div class="key" data-key="81">
+            <kbd>Q</kbd>
+            <span class="sound">Beat 1</span>
+        </div>
+
+        <div class="key" data-key="87">
+            <kbd>W</kbd>
+            <span class="sound">Beat 2</span>
+        </div>
+
+        <div class="key" data-key="69">
+            <kbd>E</kbd>
+            <span class="sound">Beat 3</span>
+        </div>
+    </div>
     <div class="keys">
-        <!--  -->
+
         <!-- ! Drums -->
         <div class="key" data-key="65">
             <kbd>A</kbd>
@@ -48,6 +67,23 @@
             <span class="sound">tink</span>
         </div>
     </div>
+    <div class="buttons">
+        <button class="btn" type="button" id="stop-btn">
+            <strong>STOP</strong>
+            <div id="container-stars">
+              <div id="stars"></div>
+            </div>
+          
+            <div id="glow">
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+          </button>
+    </div>
+    
+    <audio src="sounds/beat/mission_impossible.mp3" data-key="81"></audio>
+    <audio src="sounds/beat/beat.mp3" data-key="87"></audio>
+    <audio src="sounds/beat/beats.mp3" data-key="69"></audio>
 
     <audio src="sounds/clap.wav" data-key="65"></audio>
     <audio src="sounds/hihat.wav" data-key="83"></audio>
@@ -58,6 +94,12 @@
     <audio src="sounds/snare.wav" data-key="74"></audio>
     <audio src="sounds/tom.wav" data-key="75"></audio>
     <audio src="sounds/tink.wav" data-key="76"></audio>
+
+
+
+    <footer>
+        <h4>Panzerweb</h4>
+    </footer>
     
 
     <script src="app.js"></script>
